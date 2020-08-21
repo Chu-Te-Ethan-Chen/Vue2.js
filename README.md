@@ -4,3 +4,4 @@
 2. v-on https://jordon-chen.github.io/Vue.js/v-on/index.html  
 3. where's the mouse https://jordon-chen.github.io/Vue.js/where_is_the_mouse/index.html  
 4. earn money https://jordon-chen.github.io/Vue.js/earn_money/index.html  
+5. v-model https://jordon-chen.github.io/Vue.js/v-model/index.html  
