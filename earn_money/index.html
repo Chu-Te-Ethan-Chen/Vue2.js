@@ -1,0 +1,11 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<title>Earn money</title>
+<div id="app">
+    <p>{{ money }} USD   
+    	<button v-on:click="increase(1)">+1</button>
+    	<button v-on:click="increase(5)">+5</button>
+    	<button v-on:click="increase(10)">+10</button>
+   	</p>
+    <input type="text" v-on:keyup.enter="alertMe" name="name" id="name" placeholder="John">
+</div>
+<script src="app.js"></script>

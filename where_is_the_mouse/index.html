@@ -1,0 +1,11 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<title>Where's the mouse</title>
+<div id="app">
+    <p>Your mouse is at:</p>
+    <p v-on:mousemove="updateCoordinates">x:{{ x }}  y:{{ y }}</p>
+    <table v-on:mousemove.stop style="border: 1px black solid">
+    	<th>DEAD SPOT ZONE</th>
+    	<td>(your mouse will not be tracked here)</td>
+    </table>
+</div>
+<script src="app.js"></script>
