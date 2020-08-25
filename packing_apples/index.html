@@ -1,0 +1,12 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<title>Packing apples</title>
+<div id="app">
+    <div>
+        <p>Count the amount of apples to 24 in order to be packed.</p>
+        <p>Current apples: {{ value }}</p>
+        <button @click="value += 6">Add 6</button>
+        <button @click="value > 0 ? value -= 6 : 0 ">Minus 6</button>
+        <p>{{ result }}</p>
+    </div>
+</div>
+<script src="app.js"></script>
