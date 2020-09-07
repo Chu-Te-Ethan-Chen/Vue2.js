@@ -1,0 +1,93 @@
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!--reference: https://code.sololearn.com/WgtBYhpR7Sxp/#html-->
+<title>Turn on the lightbulb</title>
+<div id="app">
+    <div class="ceiling">
+        <div class="hold">
+	        <div class="ln"></div>
+	        <div class="ln"></div>
+	        <div class="ln"></div>
+        </div>
+         <div 
+            class="bulb"
+            @click="turnON = !turnON"
+            :class="{'bulb-off': !turnON, 'bulb-on': turnON}">
+            <div class="spot1"></div>
+            <div class="spot2"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            turnON: false
+        },
+        methods: {
+        }
+    });
+</script>
+
+<style type="text/css">
+    .ceiling {
+    width: 170px;
+    height: 20px;
+    margin: 100px auto;
+    padding-left: 40px;
+    padding-top: 20px;
+    background-color: #CB7E1F;
+    border-radius: 0%;
+    box-shadow: 0 0 50px #ffc;
+}
+.bulb {
+    width: 120px;
+    height: 120px;
+    border: 6px solid #000;
+    border-radius: 50%;
+    position: relative;
+}
+.bulb-off {
+    background-color: white;
+}
+.bulb-on {
+    background-color: yellow;
+}
+.spot1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    left: 20px;
+    top: 80px;
+}
+.spot2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+}
+
+.hold {
+    position: relative;
+    left: 25px;
+    margin-top: 8px;
+}
+
+.ln {
+    width: 80px;
+    height: 6px;
+    background-color: #000;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.ln:nth-child(1) {
+    width: 60px;
+    margin-left: 10px;
+}
+</style>
