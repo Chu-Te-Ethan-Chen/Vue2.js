@@ -1,0 +1,131 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<title>Crossing at traffic lights</title>
+<div id="app">
+  <div class="d-flex flex-row trafic-light align-items-center justify-content-around ">
+    <div :class="redLight"></div>
+    <div :class="yellowLight" ></div>
+    <div :class="greenLight"></div>
+  </div>
+  <div class="btn btn-info" @click="stopShining">Press button to cross the street!</div>
+</div>
+
+<script>
+  new Vue({
+  el: '#app',
+  data: {
+    yellowLight:{
+      yellowOn: true,
+      yellowOff: false,
+    },
+    redLight:{
+      redOn: false,
+      redOff: true,
+    },
+    greenLight:{
+      greenOn: false,
+      greenOff: true,
+    },
+    timerShine:null,
+    timerPass:null,
+  },
+  mounted:function(){
+        this.shining(); //method1 will execute at pageload
+  },
+  methods: {
+    shining: function(){
+      console.log("start shining yellow light.");
+      var vm = this;
+      vm.timerShine = setInterval(function(){
+        vm.yellowLight.yellowOn = !vm.yellowLight.yellowOn;
+        vm.yellowLight.yellowOff = !vm.yellowLight.yellowOff;
+      }, 1000);
+    },
+    stopShining: function(){
+      var vm = this;
+      clearInterval(vm.timerShine);
+      console.log("Red light on.");
+      vm.yellowLight.yellowOn = false;
+      vm.yellowLight.yellowOff = true;
+      vm.redLight.redOn = true;
+      vm.redLight.redOff = false;
+      vm.timerPass = setTimeout(function() {
+        console.log("Yellow light on.");
+          vm.redLight.redOn = false;
+          vm.redLight.redOff = true;
+          vm.yellowLight.yellowOn = true;
+          vm.yellowLight.yellowOff = false;
+      }, 3000); 
+      vm.timerPass = setTimeout(function() {
+          console.log("Green light on.");
+          vm.yellowLight.yellowOn = false;
+          vm.yellowLight.yellowOff = true;
+          vm.greenLight.greenOn = true;
+          vm.greenLight.grennOff = false;
+      }, 6000);
+      vm.timerPass = setTimeout(function() {
+          console.log("Green light off.");
+          vm.greenLight.greenOn = false;
+          vm.greenLight.grennOff = true;
+          vm.timerShine = setInterval(function(){
+              console.log("start shining yellow light.");
+              vm.yellowLight.yellowOn = !vm.yellowLight.yellowOn;
+              vm.yellowLight.yellowOff = !vm.yellowLight.yellowOff;
+          }, 1000);
+      }, 11000);
+    }
+  }
+});
+</script>
+
+<style type="text/css">
+.trafic-light {
+  width: 320px;
+  height: 120px;
+  background-color: #333;
+  border-radius: 30px;
+}
+.redOff {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255,0,0,0.5);
+  border-radius: 50%;
+}
+.redOn {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255,0,0,1);
+  border-radius: 50%;
+}
+.yellowOff {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+    background-color: rgba(255,255,0,0.5);
+}
+.yellowOn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255,255,0,1);
+}
+.greenoff {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0,255,0,0.5);
+  border-radius: 50%;
+}
+.greenOn {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0,255,0,1);
+  border-radius: 50%;
+}
+</style>
+
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
