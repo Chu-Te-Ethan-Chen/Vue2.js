@@ -1,0 +1,67 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<title>Progress</title>
+<div id="app">
+  <div>
+    <button @click="startProgress">Start Progress</button>
+    <button @click="pauseProgress">Pause</button>
+    <button @click="resetProgress">Reset</button>
+    <div :class="['progress-bar']" :style="progressBar"></div>
+    <div :class="['progress']" :style="progress"></div>
+  </div>
+</div>
+
+<script>
+  new Vue({
+  el: '#app',
+  data: {
+    progressBar: {
+      width: '0px',
+      backgroundColor: '#007bff',
+    },
+    progress: {
+      width: '200px',
+    },
+    timerProgress: null,
+  },
+  methods: {
+    startProgress: function() {
+      var vm = this;
+      var filledWidth = parseInt(vm.progressBar.width);
+      var emptyWidth = parseInt(vm.progress.width);
+      vm.timerProgress = setInterval(function() {
+        if (filledWidth == 200) { clearInterval(vm.timerProgress); return;}
+        filledWidth = filledWidth + 10;
+        emptyWidth = emptyWidth - 10
+        vm.progressBar.width = filledWidth + 'px';
+        vm.progress.width = emptyWidth + 'px';
+        console.log(filledWidth);
+
+      }, 500);
+    },
+    pauseProgress: function(){
+      var vm = this;
+      clearInterval(vm.timerProgress);
+    },
+    resetProgress: function(){
+      var vm = this;
+      clearInterval(vm.timerProgress);
+      vm.progressBar.width = '0px';
+      vm.progress.width = '200px';
+    }
+  }
+});
+</script>
+
+<style type="text/css">
+.progress-bar {
+  height: 20px;
+  border-radius: .25rem;
+  float: left;
+}
+.progress {
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+  float: left;
+}
+</style>
