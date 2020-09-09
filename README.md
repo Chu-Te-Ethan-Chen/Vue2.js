@@ -8,3 +8,4 @@
 6. packing apples https://jordon-chen.github.io/Vue.js/packing_apples/index.html  
 7. turn on the lightbulb https://jordon-chen.github.io/Vue.js/turn_on_the_lightbulb/index.html  
 8. crossing at traffic lights https://jordon-chen.github.io/Vue.js/crossing_at_traffic_lights/index.html  
+9. progress https://jordon-chen.github.io/Vue.js/progress/index.html  
