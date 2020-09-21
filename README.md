@@ -11,3 +11,4 @@
 9. progress https://jordon-chen.github.io/Vue.js/progress/index.html  
 10. v-if v-else v-show v-for https://jordon-chen.github.io/Vue.js/v-if_v-else_v-show_v-for/index.html  
 11. monster slayer https://jordon-chen.github.io/Vue.js/monster_slayer/index.html  
+12. server status https://jordon-chen.github.io/Vue.js/setvers_status/index.html  
