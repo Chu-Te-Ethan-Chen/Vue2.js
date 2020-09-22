@@ -1,4 +1,4 @@
-# Vue.js
+# Vue2.js
 
 1. v-bind https://jordon-chen.github.io/Vue2.js/v-bind/index.html  
 2. v-on https://jordon-chen.github.io/Vue2.js/v-on/index.html  
