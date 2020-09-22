@@ -12,3 +12,4 @@
 10. v-if v-else v-show v-for https://jordon-chen.github.io/Vue2.js/v-if_v-else_v-show_v-for/index.html  
 11. monster slayer https://jordon-chen.github.io/Vue2.js/monster_slayer/index.html  
 12. servers status https://jordon-chen.github.io/Vue2.js/servers_status/index.html  
+13. dynamic component https://jordon-chen.github.io/Vue2.js/dynamic_component/index.html
