@@ -15,3 +15,4 @@
 13. dynamic component https://jordon-chen.github.io/Vue2.js/dynamic_component/index.html
 14. your own quotes https://jordon-chen.github.io/Vue2.js/your_own_quotes/index.html
 15. form https://jordon-chen.github.io/Vue2.js/form/index.html
+16. v-directives https://jordon-chen.github.io/Vue2.js/v_directives/index.html
