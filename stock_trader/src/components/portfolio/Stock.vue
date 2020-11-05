@@ -16,7 +16,7 @@
                 </div>
                 <div class="float-right">
                     <button
-                        class="btn btn-success"
+                        class="btn btn-info"
                         @click="sellStock"
                         :disabled="insufficientQuantity || quantity <= 0 || !Number.isInteger(quantity)">
                         {{ insufficientQuantity ? 'Not enough' : 'Sell'}}</button>
