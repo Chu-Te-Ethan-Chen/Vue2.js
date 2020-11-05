@@ -19,6 +19,7 @@
         },
         created() {
             this.$store.dispatch('initStocks');
+            router.push({path: '/'});
         }
     }
 </script>
