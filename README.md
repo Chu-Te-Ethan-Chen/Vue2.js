@@ -18,3 +18,4 @@
 16. v-directives https://jordon-chen.github.io/Vue2.js/v_directives/index.html
 17. v-directives https://jordon-chen.github.io/Vue2.js/filters_mixins/index.html
 18. flip card challenge https://jordon-chen.github.io/Vue2.js/flip_card_challenge/index.html
+19. stock trader https://jordon-chen.github.io/Vue2.js/stock_trader/index.html
